@@ -45,12 +45,3 @@ setInterval(() => {
 }, 5000)
 
 show()
-
-const leadForm = document.getElementById('leadForm')
-const formSuccess = document.getElementById('formSuccess')
-leadForm.addEventListener('submit', (e) => {
-  e.preventDefault()
-  formSuccess.classList.add('show')
-  leadForm.reset()
-  setTimeout(() => formSuccess.classList.remove('show'), 4000)
-})

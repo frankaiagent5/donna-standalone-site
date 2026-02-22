@@ -89,14 +89,16 @@
       <div>
         <h2>Request a Free Consultation</h2>
         <p class="muted">Share a few details and Donna can follow up with next steps for buying or selling.</p>
-        <form class="lead-form" id="leadForm">
+        <form class="lead-form" id="leadForm" action="https://formsubmit.co/frankaiagent5@gmail.com" method="POST">
           <input type="text" name="name" placeholder="Your name" required />
           <input type="tel" name="phone" placeholder="Phone number" required />
           <input type="email" name="email" placeholder="Email (optional)" />
           <textarea name="message" rows="4" placeholder="Tell Donna what you need help with..."></textarea>
+          <input type="hidden" name="_subject" value="New Consultation Request - Donna Hodges Website" />
+          <input type="hidden" name="_next" value="https://frankaiagent5.github.io/donna-standalone-site/thank-you.html" />
+          <input type="hidden" name="_captcha" value="false" />
           <button type="submit" class="btn">Send Request</button>
-          <p class="form-note">Demo form is currently set to local mode. We can connect it to email/CRM next.</p>
-          <p class="success" id="formSuccess">Thanks — your request has been captured. Donna will follow up soon.</p>
+          <p class="form-note">Form is now live and sends submissions to email.</p>
         </form>
       </div>
       <div class="panel contact">
