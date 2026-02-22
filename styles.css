@@ -1,220 +1,37 @@
-:root {
-  --bg: #f4f8ff;
-  --ink: #0f1b3d;
-  --muted: #4c5d89;
-  --brand: #3458ff;
-  --brand2: #8a3ffc;
-  --teal: #09b5c8;
-  --panel: #ffffff;
-  --line: #dbe5ff;
-}
+:root{--ink:#0f1b3d;--muted:#52638f;--brand:#2e53ff;--line:#dbe4ff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;color:var(--ink);background:#f4f7ff}
+.wrap{width:min(1120px,92%);margin-inline:auto}
 
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Inter, system-ui, Arial, sans-serif;
-  color: var(--ink);
-  background:
-    radial-gradient(circle at 10% 0%, rgba(52,88,255,.12), transparent 25%),
-    radial-gradient(circle at 95% 10%, rgba(138,63,252,.12), transparent 22%),
-    radial-gradient(circle at 50% 100%, rgba(9,181,200,.10), transparent 28%),
-    var(--bg);
-}
+.hero{color:#fff;position:relative;background:
+linear-gradient(rgba(21,33,75,.7),rgba(21,33,75,.72)),
+url('https://source.unsplash.com/1600x900/?luxury-home,real-estate,florida') center/cover no-repeat}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}.brand{font-weight:800;color:#fff}.nav div{display:flex;gap:14px;flex-wrap:wrap}.nav a{color:#e7edff;text-decoration:none}
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:24px;padding:60px 0 70px;align-items:center}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.55);padding:6px 10px;border-radius:999px;font-size:12px}
+h1{font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;margin:12px 0}.sub{color:#dde6ff;max-width:62ch}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{background:var(--brand);color:#fff;text-decoration:none;padding:10px 14px;border-radius:11px;font-weight:700}.btn.alt{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.55)}
 
-a { color: #3552d8; text-decoration: none; }
+.agent-card{background:rgba(255,255,255,.95);color:var(--ink);padding:16px;border-radius:16px;box-shadow:0 16px 30px rgba(0,0,0,.25)}
+.headshot{width:120px;height:120px;object-fit:cover;border-radius:999px;border:4px solid #d4defc}
 
-.hero {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(120deg, #1f2f66, #283f8f 55%, #2b2a6d);
-  color: white;
-}
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.18), transparent 30%);
-  pointer-events: none;
-}
+.main{padding:20px 0 30px;display:grid;gap:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.cards article{background:#fff;border:1px solid var(--line);padding:14px;border-radius:12px;box-shadow:0 8px 20px rgba(27,56,130,.08)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 8px 20px rgba(27,56,130,.08)}
+.muted{color:var(--muted)}
 
-.nav, .hero-inner, .container, .quick-stats {
-  width: min(1120px, 92%);
-  margin-inline: auto;
-}
+.slider{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center}
+.slides{position:relative;min-height:260px;background:
+linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.72)),
+url('https://source.unsplash.com/1200x700/?modern-house,interior') center/cover no-repeat;
+border:1px solid var(--line);border-radius:12px;padding:8px}
+.slide{display:none;width:100%;max-height:460px;object-fit:contain;border-radius:8px}
+.slide.active{display:block}
+.nav-btn{width:38px;height:38px;border:none;border-radius:999px;background:#2f52f5;color:#fff;font-size:24px;cursor:pointer}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:10px}.dot{width:10px;height:10px;border-radius:999px;border:none;background:#b8c5f7;cursor:pointer}.dot.active{background:#2f52f5}
 
-.nav {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-}
-.brand { color: white; font-weight: 800; letter-spacing: .3px; }
-.nav div { display: flex; gap: 14px; flex-wrap: wrap; }
-.nav a { color: #e8edff; }
-.nav a:hover { color: #fff; }
+.contact{background:
+linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)),
+url('https://source.unsplash.com/1200x600/?jacksonville,florida,neighborhood') center/cover no-repeat}
+footer{text-align:center;padding:24px;color:#6c7fb3}
 
-.hero-inner {
-  position: relative;
-  z-index: 2;
-  padding: 52px 0 70px;
-  display: grid;
-  grid-template-columns: 1.45fr 1fr;
-  gap: 26px;
-  align-items: center;
-}
-
-.tag {
-  display: inline-block;
-  font-size: 12px;
-  letter-spacing: .6px;
-  border: 1px solid rgba(255,255,255,.45);
-  background: rgba(255,255,255,.12);
-  border-radius: 999px;
-  padding: 7px 12px;
-}
-h1 {
-  margin: 12px 0;
-  font-size: clamp(2rem, 3.8vw, 3.2rem);
-  line-height: 1.1;
-}
-.lead { color: #dbe4ff; max-width: 62ch; }
-
-.cta-row { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
-.btn {
-  display: inline-block;
-  border-radius: 12px;
-  padding: 11px 16px;
-  font-weight: 700;
-  border: 1px solid transparent;
-  background: var(--brand);
-  color: white;
-  box-shadow: 0 10px 24px rgba(52,88,255,.25);
-}
-.btn.ghost {
-  background: rgba(255,255,255,.12);
-  border-color: rgba(255,255,255,.5);
-  color: white;
-  box-shadow: none;
-}
-
-.hero-card {
-  background: rgba(255,255,255,.95);
-  color: var(--ink);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 18px 36px rgba(5,12,40,.3);
-}
-.headshot {
-  width: 110px;
-  height: 110px;
-  border-radius: 999px;
-  object-fit: cover;
-  border: 4px solid #ced8ff;
-}
-.hero-card h3 { margin: 10px 0 4px; }
-.hero-card p { margin: 0 0 10px; color: var(--muted); }
-.mini-points { display: grid; gap: 6px; font-size: 14px; color: #22315f; }
-
-.quick-stats {
-  margin-top: -28px;
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(3, 1fr);
-}
-.quick-stats article {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 14px;
-  box-shadow: 0 8px 24px rgba(30,55,120,.08);
-}
-.quick-stats h4 { margin: 0 0 6px; }
-.quick-stats p { margin: 0; color: var(--muted); }
-
-main { padding-bottom: 24px; }
-.section { margin-top: 18px; }
-.two-col {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: 1fr 1fr;
-}
-.panel {
-  border-radius: 16px;
-  padding: 18px;
-  border: 1px solid var(--line);
-}
-.panel.light { background: #fff; }
-.panel.gradient {
-  background: linear-gradient(135deg, #edf1ff, #ebf8ff 50%, #f5ecff);
-}
-h2 { margin: 0 0 10px; }
-ul { margin: 0; padding-left: 18px; }
-li, p { color: var(--muted); }
-
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-.chips span {
-  background: white;
-  border: 1px solid #d3e0ff;
-  border-radius: 999px;
-  padding: 7px 11px;
-  font-size: 13px;
-  color: #314985;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-bottom: 12px;
-}
-.quote {
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 12px;
-}
-.quote p { margin-top: 0; color: #334b86; }
-.quote span { color: #5a6fa7; font-size: 14px; }
-
-.testimonial-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-.testimonial-gallery img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  box-shadow: 0 8px 20px rgba(24,45,100,.12);
-}
-
-.contact-cta {
-  background: linear-gradient(120deg, #243a82, #3755b8 55%, #2e367f);
-  color: white;
-  border-radius: 18px;
-  padding: 18px;
-  display: grid;
-  gap: 14px;
-  grid-template-columns: 1.35fr 1fr;
-}
-.contact-cta p, .contact-cta a { color: #e6edff; }
-.cta-buttons { display: grid; gap: 8px; align-content: center; }
-
-footer {
-  text-align: center;
-  color: #6578ac;
-  padding: 28px 10px;
-}
-
-@media (max-width: 920px) {
-  .hero-inner,
-  .two-col,
-  .contact-cta,
-  .testimonials-grid,
-  .testimonial-gallery,
-  .quick-stats {
-    grid-template-columns: 1fr;
-  }
-  .quick-stats { margin-top: 12px; }
-}
+@media(max-width:920px){.hero-grid,.cards,.slider{grid-template-columns:1fr}.slides{min-height:220px}}
