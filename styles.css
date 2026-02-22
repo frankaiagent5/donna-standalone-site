@@ -7,13 +7,19 @@
   --line: #2a3863;
   --primary: #6d7dff;
   --accent: #22d3ee;
+  --pink: #f472b6;
+  --gold: #fbbf24;
 }
 
 * { box-sizing: border-box; }
 body {
   margin: 0;
   font-family: Inter, system-ui, Arial, sans-serif;
-  background: radial-gradient(circle at top, #0c1530, var(--bg) 45%);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(109,125,255,.25), transparent 30%),
+    radial-gradient(circle at 90% 12%, rgba(244,114,182,.20), transparent 28%),
+    radial-gradient(circle at 50% 100%, rgba(34,211,238,.14), transparent 30%),
+    radial-gradient(circle at top, #0c1530, var(--bg) 45%);
   color: var(--text);
 }
 a { color: #c4d1ff; text-decoration: none; }
@@ -34,6 +40,7 @@ a { color: #c4d1ff; text-decoration: none; }
 }
 .nav .brand { font-weight: 700; color: #fff; }
 .nav div { display: flex; gap: 14px; flex-wrap: wrap; }
+.nav a:hover { color: #fff; }
 
 .hero-inner {
   max-width: 1100px;
@@ -122,11 +129,13 @@ h1 {
   gap: 12px;
 }
 .stats article {
-  background: #0f1730;
+  background: linear-gradient(160deg, #101a36, #172a55);
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 14px;
 }
+.stats article:nth-child(2) { background: linear-gradient(160deg, #2a1d4d, #1a2e63); }
+.stats article:nth-child(3) { background: linear-gradient(160deg, #14334a, #1c2f5c); }
 .stats p { color: var(--muted); margin-bottom: 0; }
 
 .card {
@@ -141,7 +150,7 @@ p, li { color: var(--muted); }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 .chips span {
   border: 1px solid #34508b;
-  background: #122245;
+  background: linear-gradient(135deg, #122245, #1c2f5f);
   color: #d8e4ff;
   padding: 6px 10px;
   border-radius: 999px;
@@ -168,6 +177,18 @@ p, li { color: var(--muted); }
   font-size: 14px;
 }
 
+.testimonial-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.testimonial-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
 .contact strong { color: #f1f5ff; }
 
 footer {
@@ -180,5 +201,6 @@ footer {
   .split { grid-template-columns: 1fr; }
   .stats { grid-template-columns: 1fr; }
   .testimonials { grid-template-columns: 1fr; }
+  .testimonial-gallery { grid-template-columns: 1fr; }
   h1 { font-size: 32px; }
 }
