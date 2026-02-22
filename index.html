@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="hero">
-    <nav class="nav wrap">
+    <nav class="nav wrap" id="topNav">
       <a href="index.html" class="brand">Donna Hodges, REALTOR®, GRI, ABR, AHWD, MRP</a>
       <div>
         <a href="jacksonville-real-estate-agent.html">Jacksonville</a>
@@ -21,7 +21,10 @@
     <div class="wrap hero-grid">
       <div>
         <p class="badge">REALTOR® | GRI, ABR, AHWD, MRP</p>
-        <h1>Jacksonville Real Estate Guidance That Feels Personal</h1>
+        <h1>
+          <span class="animated-line">Jacksonville Real Estate Guidance</span>
+          <span class="animated-line">That Feels Personal</span>
+        </h1>
         <p class="sub">Helping buyers, sellers, and relocating families move with clarity and confidence across Jacksonville and St. Johns.</p>
         <div class="row">
           <a class="btn" href="tel:+19042196230">Call 904-219-6230</a>
@@ -82,12 +85,27 @@
       <div class="dots" id="dots"></div>
     </section>
 
-    <section class="panel contact">
-      <h2>Contact Donna</h2>
-      <p><strong>Donna Hodges, REALTOR®, GRI, ABR, AHWD, MRP</strong></p>
-      <p>📞 <a href="tel:+19042196230">904-219-6230</a></p>
-      <p>📍 12636 San Jose Boulevard, Jacksonville, FL 32223</p>
-      <p><a href="https://www.facebook.com/donnahodgesrealtor" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://x.com/listandselljax" target="_blank" rel="noopener noreferrer">X (Twitter)</a></p>
+    <section class="panel lead-section">
+      <div>
+        <h2>Request a Free Consultation</h2>
+        <p class="muted">Share a few details and Donna can follow up with next steps for buying or selling.</p>
+        <form class="lead-form" id="leadForm">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="tel" name="phone" placeholder="Phone number" required />
+          <input type="email" name="email" placeholder="Email (optional)" />
+          <textarea name="message" rows="4" placeholder="Tell Donna what you need help with..."></textarea>
+          <button type="submit" class="btn">Send Request</button>
+          <p class="form-note">Demo form is currently set to local mode. We can connect it to email/CRM next.</p>
+          <p class="success" id="formSuccess">Thanks — your request has been captured. Donna will follow up soon.</p>
+        </form>
+      </div>
+      <div class="panel contact">
+        <h2>Contact Donna</h2>
+        <p><strong>Donna Hodges, REALTOR®, GRI, ABR, AHWD, MRP</strong></p>
+        <p>📞 <a href="tel:+19042196230">904-219-6230</a></p>
+        <p>📍 12636 San Jose Boulevard, Jacksonville, FL 32223</p>
+        <p><a href="https://www.facebook.com/donnahodgesrealtor" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://x.com/listandselljax" target="_blank" rel="noopener noreferrer">X (Twitter)</a></p>
+      </div>
     </section>
   </main>
 
