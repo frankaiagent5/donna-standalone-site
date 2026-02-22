@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frankaiagent5.github.io/donna-standalone-site/sitemap.xml
